@@ -3,8 +3,19 @@ $(function(){
 
   $("#submit").click(function(){
     var words= $("input#word").val();
-
-    $("#output").text(words);
+    var result=notnumber(words)
+    $("#output").text(result);
 
   });
 });
+
+
+
+var notnumber=function(words){
+if (!(isNaN(words))) {
+alert("Please enter words");
+}
+else{
+  return words
+}
+}

@@ -1,21 +1,46 @@
 // User interface logic
 $(function(){
-
+// debugger
   $("#submit").click(function(){
     var words= $("input#word").val();
-    var result=notnumber(words)
+    var result=latinTranslator(words);
+
+    // var vowel = result.split(" ");
+    // var vowel =result.includes("a", "e", "i", "o", "u",0)
+    //   if (vowel === true) {
+    //     // arr.push(words + "way");
+    //   }
+
+    // var output=[];
+    // output=spec1(vowel);
+    // var vowels=output.join("");
     $("#output").text(result);
 
   });
 });
 
+// business logic
+
+var latinTranslator=function(string){
+var splitWord= string.split("")
 
 
-var notnumber=function(words){
-if (!(isNaN(words))) {
-alert("Please enter words");
+if((splitWord.length===1)&& isVowel(splitWord[0])){
+
+  splitWord=splitWord.concat("ay");
+  var splitJoin=splitWord.join("");
+
+  return splitJoin;
 }
-else{
-  return words
+
+
+
+}
+var isVowel=function(letter){
+  if ((letter==="a")||(letter==="e")||(letter==="i")||(letter==="o")||(letter==="u")){
+    return true;
+  }else{
+    return false;
+
 }
 }

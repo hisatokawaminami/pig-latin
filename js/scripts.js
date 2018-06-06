@@ -21,6 +21,7 @@ $(function(){
 
 // business logic
 
+// this function to apply when sentence is entered
 var sentenceTranslator = function(inputSentence) {
   var sentenceArray = inputSentence.split(" ");
   var output = [];
@@ -29,6 +30,7 @@ var sentenceTranslator = function(inputSentence) {
   })
   return output.join(" ");
 }
+// this function to apply when sentence is entered
 
 
 var latinTranslator=function(string){

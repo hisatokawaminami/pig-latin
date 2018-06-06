@@ -37,8 +37,16 @@ else if(isVowel(splitWord[0])){
   splitWord=splitWord.join("");
   return splitWord;
 }
+else if(!isVowel(splitWord[0])){
+  var count= isNotVowel(splitWord)
+  var joinedWord=splitWord.join("");
+  var array= [joinedWord.slice(count),joinedWord.slice(0,count),"ay" ]
+  var joined= array.join("");
 
+  return joined;
+}
 
+}
 }
 var isVowel=function(letter){
   if ((letter==="a")||(letter==="e")||(letter==="i")||(letter==="o")||(letter==="u")){
@@ -47,4 +55,13 @@ var isVowel=function(letter){
     return false;
 
 }
+}
+var isNotVowel=function(arr){
+  var count = 0;
+  for (var i = 0; i < arr.length ; i+=1 )
+  if (!isVowel(arr[i])){
+    count+=1;
+  }else{
+    return count;
+  }
 }

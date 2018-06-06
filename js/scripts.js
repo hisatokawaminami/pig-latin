@@ -19,6 +19,13 @@ $(function(){
   });
 });
 
+// things need to be fixed
+  // - number
+  // - space
+  // - punctuation
+  // - add upper/lower case 
+
+
 // business logic
 
 // this function to apply when sentence is entered

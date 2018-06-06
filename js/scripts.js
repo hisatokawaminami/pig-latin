@@ -28,11 +28,15 @@ var splitWord= string.split("")
 if((splitWord.length===1)&& isVowel(splitWord[0])){
 
   splitWord=splitWord.concat("ay");
-  var splitJoin=splitWord.join("");
+  splitWord=splitWord.join("");
 
-  return splitJoin;
+  return splitWord;
 }
-
+else if(isVowel(splitWord[0])){
+  splitWord=splitWord.concat("way");
+  splitWord=splitWord.join("");
+  return splitWord;
+}
 
 
 }
